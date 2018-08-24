@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="67829cc2-66ed-4ca9-816a-184d578510e6" name="Default" comment="update para">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/SyncToDashDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/SyncToDashDB.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/LiftCLI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/LiftCLI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/SyncToDashDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataToDashDB.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,15 +27,15 @@
         <counts>
           <entry key="configure" value="90" />
           <entry key="ds_para" value="19" />
-          <entry key="dummy" value="40" />
-          <entry key="py" value="7786" />
+          <entry key="dummy" value="44" />
+          <entry key="py" value="7798" />
           <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="160" />
-          <entry key="Python" value="7786" />
+          <entry key="PLAIN_TEXT" value="164" />
+          <entry key="Python" value="7798" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -42,14 +43,14 @@
           <entry key="configure" value="5" />
           <entry key="ds_para" value="1" />
           <entry key="log" value="4" />
-          <entry key="py" value="13" />
+          <entry key="py" value="14" />
           <entry key="txt" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="24" />
-          <entry key="Python" value="13" />
+          <entry key="Python" value="14" />
         </counts>
       </usages-collector>
     </session>
@@ -81,15 +82,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Src/SyncToDashDB.py">
+        <entry file="file://$PROJECT_DIR$/DataToDashDB.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
               <folding>
-                <marker date="1535094916628" expanded="true" signature="172:173" ph="..." />
-                <marker date="1535094916628" expanded="true" signature="588:589" ph="..." />
-                <marker date="1535094916628" expanded="true" signature="588:591" ph="..." />
-                <marker date="1535094916628" expanded="true" signature="588:593" ph="..." />
+                <marker date="1535103899467" expanded="true" signature="172:173" ph="..." />
+                <marker date="1535103899467" expanded="true" signature="588:589" ph="..." />
+                <marker date="1535103899467" expanded="true" signature="588:591" ph="..." />
+                <marker date="1535103899467" expanded="true" signature="588:593" ph="..." />
               </folding>
             </state>
           </provider>
@@ -107,12 +108,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Src/LiftCLI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="305">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
               <folding>
                 <element signature="e#1#24#0" expanded="true" />
-                <marker date="1535093589978" expanded="true" signature="48:84" ph="..." />
-                <marker date="1535093589978" expanded="true" signature="84:85" ph="..." />
+                <marker date="1535102628826" expanded="true" signature="48:84" ph="..." />
+                <marker date="1535102628826" expanded="true" signature="84:85" ph="..." />
               </folding>
             </state>
           </provider>
@@ -133,8 +134,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Src/GetPara.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="18" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="18" />
+            <state relative-caret-position="40">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -186,6 +187,8 @@
         <option value="$PROJECT_DIR$/Src/GetPara.py" />
         <option value="$PROJECT_DIR$/Src/LiftCLI.py" />
         <option value="$PROJECT_DIR$/Src/SyncToDashDB.py" />
+        <option value="$PROJECT_DIR$/Src/DataToDashDB.py" />
+        <option value="$PROJECT_DIR$/DataToDashDB.py" />
       </list>
     </option>
   </component>
@@ -232,6 +235,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Src" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SongChen\PycharmProjects\SyncToDashDB" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -244,8 +252,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.SyncToDashDB">
-    <configuration name="Extract" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager">
+    <configuration name="DataToDashDB" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SyncToDashDB" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -253,95 +261,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\SongChen\PycharmProjects\SyncToDashDB\Src\LiftCLI.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Log" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="SyncToDashDB" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tool" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tool/Log.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Scp" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="SyncToDashDB" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Program Files\Python37\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Src" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\SongChen\PycharmProjects\SyncToDashDB\Src\FileTransfer.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="SyncToDashDB" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="SyncToDashDB" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Program Files\Python37\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Src" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Src/SyncToDashDB.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Util" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="SyncToDashDB" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tool" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tool/Util.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\SongChen\PycharmProjects\SyncToDashDB\DataToDashDB.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -365,20 +289,9 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Python.Extract" />
-      <item itemvalue="Python.Scp" />
-      <item itemvalue="Python.Log" />
-      <item itemvalue="Python.Util" />
-      <item itemvalue="Python.SyncToDashDB" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.SyncToDashDB" />
-        <item itemvalue="Python.Util" />
-        <item itemvalue="Python.Extract" />
-        <item itemvalue="Python.Log" />
-        <item itemvalue="Python.Scp" />
+        <item itemvalue="Python.DataToDashDB" />
       </list>
     </recent_temporary>
   </component>
@@ -419,21 +332,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20687376" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20687376" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4976867" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4970258" visible="true" weight="0.27234042" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4937211" weight="0.27234042" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4976867" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5029742" side_tool="true" visible="true" weight="0.27234042" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50231326" side_tool="true" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49966952" weight="0.32907802" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -466,6 +380,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update para" />
     <option name="LAST_COMMIT_MESSAGE" value="update para" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DataToDashDB.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DataToDashDB.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/run20180813183022365-447975/summary.txt" />
@@ -533,34 +463,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Src/LiftCLI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#1#24#0" expanded="true" />
-            <marker date="1535093589978" expanded="true" signature="48:84" ph="..." />
-            <marker date="1535093589978" expanded="true" signature="84:85" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tool/Util.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="620">
           <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/GetPara.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -577,15 +485,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Src/SyncToDashDB.py">
+    <entry file="file://$PROJECT_DIR$/Src/LiftCLI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="e#1#24#0" expanded="true" />
+            <marker date="1535102628826" expanded="true" signature="48:84" ph="..." />
+            <marker date="1535102628826" expanded="true" signature="84:85" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/GetPara.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataToDashDB.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
           <folding>
-            <marker date="1535094916628" expanded="true" signature="172:173" ph="..." />
-            <marker date="1535094916628" expanded="true" signature="588:589" ph="..." />
-            <marker date="1535094916628" expanded="true" signature="588:591" ph="..." />
-            <marker date="1535094916628" expanded="true" signature="588:593" ph="..." />
+            <marker date="1535103899467" expanded="true" signature="172:173" ph="..." />
+            <marker date="1535103899467" expanded="true" signature="588:589" ph="..." />
+            <marker date="1535103899467" expanded="true" signature="588:591" ph="..." />
+            <marker date="1535103899467" expanded="true" signature="588:593" ph="..." />
           </folding>
         </state>
       </provider>

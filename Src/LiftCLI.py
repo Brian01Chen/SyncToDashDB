@@ -3,7 +3,7 @@ from Tool.Util import *
 from Tool.Log import *
 
 
-para = read_conf('../configure')
+para = read_conf('configure')
 
 
 @Timeit
@@ -65,6 +65,7 @@ def lift_rm(datafile):
         .replace('#BLUCEDPHOST', para['BLUCEDPHOST'])
 
     exe_com(ext_command, '.')
+
 
 if __name__ == '__main__':
     p = lift_ext('DWDM2', 'APPL_DATA_RECENCY', r'C:\Users\SongChen\WorkSpace\Data\temp.csv')
