@@ -3,7 +3,7 @@ from Tool.Util import *
 from Tool.Log import *
 
 
-para = read_conf('configure')
+para = read_conf('../configure')
 
 
 @Timeit
