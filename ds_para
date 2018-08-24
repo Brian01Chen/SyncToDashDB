@@ -1,5 +1,0 @@
-DSW_SQL_DIR='/opt/IBM/InformationServer/Server/Projects/dswdw_fvt/dw_cfg/sqls/'
-t_db_name=DSSRUG
-t_user=csongbj
-t_pwd=Feilong03
-t_src_table=dwdm1.saas_open_ord_fact
