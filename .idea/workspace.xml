@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="67829cc2-66ed-4ca9-816a-184d578510e6" name="Default" comment="update para">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/LiftCLI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/LiftCLI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/SyncToDashDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataToDashDB.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,9 +82,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataToDashDB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            <state relative-caret-position="160">
+              <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
               <folding>
+                <element signature="e#0#25#0" expanded="true" />
                 <marker date="1535103899467" expanded="true" signature="172:173" ph="..." />
                 <marker date="1535103899467" expanded="true" signature="588:589" ph="..." />
                 <marker date="1535103899467" expanded="true" signature="588:591" ph="..." />
@@ -112,8 +111,8 @@
               <caret line="67" selection-start-line="67" selection-end-line="67" />
               <folding>
                 <element signature="e#1#24#0" expanded="true" />
-                <marker date="1535102628826" expanded="true" signature="48:84" ph="..." />
-                <marker date="1535102628826" expanded="true" signature="84:85" ph="..." />
+                <marker date="1535104061102" expanded="true" signature="48:81" ph="..." />
+                <marker date="1535104061102" expanded="true" signature="81:82" ph="..." />
               </folding>
             </state>
           </provider>
@@ -327,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535094578347</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update para">
+      <created>1535104095460</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1535104095460</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -380,22 +386,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update para" />
     <option name="LAST_COMMIT_MESSAGE" value="update para" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DataToDashDB.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DataToDashDB.py</url>
-          <line>10</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/run20180813183022365-447975/summary.txt" />
@@ -491,8 +481,8 @@
           <caret line="67" selection-start-line="67" selection-end-line="67" />
           <folding>
             <element signature="e#1#24#0" expanded="true" />
-            <marker date="1535102628826" expanded="true" signature="48:84" ph="..." />
-            <marker date="1535102628826" expanded="true" signature="84:85" ph="..." />
+            <marker date="1535104061102" expanded="true" signature="48:81" ph="..." />
+            <marker date="1535104061102" expanded="true" signature="81:82" ph="..." />
           </folding>
         </state>
       </provider>
@@ -509,9 +499,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataToDashDB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        <state relative-caret-position="160">
+          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
           <folding>
+            <element signature="e#0#25#0" expanded="true" />
             <marker date="1535103899467" expanded="true" signature="172:173" ph="..." />
             <marker date="1535103899467" expanded="true" signature="588:589" ph="..." />
             <marker date="1535103899467" expanded="true" signature="588:591" ph="..." />
