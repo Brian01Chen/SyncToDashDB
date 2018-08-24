@@ -1,7 +1,7 @@
-import Src.GetPara as getpara
-import Src.DB2CLI as db2
-import Src.FileTransfer as filedtl
-import Src.LiftCLI as lift
+import GetPara as getpara
+import DB2CLI as db2
+import FileTransfer as filedtl
+import LiftCLI as lift
 from Tool.Log import *
 
 
