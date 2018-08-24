@@ -6,16 +6,14 @@ from Tool.Log import *
 para = read_conf('configure')
 
 
-
-
 @Timeit
 def lift_ext(schema, tabname, trgtfile):
-    ext_command = 'lift extract -ss #SCHEMA -st #TABLE -sd #DATABASE -su #USER -sp #PASSWORD -sh #HOST -sdp #PORT ' \
+    ext_command = 'lift extract -ss #SCHEMA -st #SRCTABLE -sd #DSWDB -su #DBUSER -sp #DBPASSWD -sh #DBHOST -sdp #PORT ' \
                   '-sdt db2 -ssl ' \
                   '-f #TRGTFILE -rp'
-    ext_command = ext_command.replace('#SCHEMA', schema).replace('#TABLE', tabname).replace('#TRGTFILE', trgtfile) \
-        .replace('#DATABASE', para['DATABASE']).replace('#HOST', para['HOST']).replace('#PORT', para['PORT'])    \
-        .replace('#USER', para['USER']).replace('#PASSWORD', para['PASSWORD'])
+    ext_command = ext_command.replace('#SCHEMA', schema).replace('#SRCTABLE', tabname).replace('#TRGTFILE', trgtfile) \
+        .replace('#DSWDB', para['DSWDB']).replace('#DBHOST', para['DBHOST']).replace('#PORT', para['PORT'])    \
+        .replace('#DBUSER', para['DBUSER']).replace('#DBPASSWD', para['DBPASSWD'])
 
     exe_com(ext_command, '.')
 
@@ -23,10 +21,11 @@ def lift_ext(schema, tabname, trgtfile):
 @Timeit
 def lift_put(datafile):
 
-    ext_command = 'lift put -f #TRGTFILE -tu #DALSUSER -tp #DALSPASSWORD --target-host #DALSHOST -rp'
+    ext_command = 'lift put -f #TRGTFILE -tu #BLUCEDPUSER -tp #BLUCEDPPASSWORD --target-host #BLUCEDPHOST -rp'
     ext_command = ext_command.replace('#TRGTFILE', datafile)
-    ext_command = ext_command.replace('#DALSUSER', para['DALSUSER']).replace('#DALSPASSWORD',para['DALSPASSWORD'])\
-        .replace('#DALSHOST', para['DALSHOST'])
+    ext_command = ext_command.replace('#BLUCEDPUSER', para['BLUCEDPUSER'])\
+        .replace('#BLUCEDPPASSWORD', para['BLUCEDPPASSWORD'])\
+        .replace('#BLUCEDPHOST', para['BLUCEDPHOST'])
 
     exe_com(ext_command, '.')
 
@@ -34,12 +33,13 @@ def lift_put(datafile):
 @Timeit
 def lift_load(datafile):
 
-    ext_command = 'lift load -f #TRGTFILE -ts #DALSCHEMA -tt #DALTABLE -tu #DALSUSER -tp #DALSPASSWORD \
-                   -th #DALSHOST -fo db2 -a replace'
+    ext_command = 'lift load -f #TRGTFILE -ts #BLUTBSCHEMA -tt #BLUTABLE -tu #BLUCEDPUSER -tp #BLUCEDPPASSWORD \
+                   -th #BLUCEDPHOST -fo db2 -a replace'
     ext_command = ext_command.replace('#TRGTFILE', os.path.basename(datafile))
-    ext_command = ext_command.replace('#DALSCHEMA', para['DALSCHEMA']).replace('#DALTABLE', para['DALTABLE'])\
-        .replace('#DALSUSER', para['DALSUSER']).replace('#DALSPASSWORD', para['DALSPASSWORD']) \
-        .replace('#DALSHOST', para['DALSHOST'])
+    ext_command = ext_command.replace('#BLUTBSCHEMA', para['BLUTBSCHEMA']).replace('#BLUTABLE', para['BLUTABLE'])\
+        .replace('#BLUCEDPUSER', para['BLUCEDPUSER'])\
+        .replace('#BLUCEDPPASSWORD', para['BLUCEDPPASSWORD']) \
+        .replace('#BLUCEDPHOST', para['BLUCEDPHOST'])
 
     exe_com(ext_command, '.')
 
@@ -47,10 +47,10 @@ def lift_load(datafile):
 @Timeit
 def lift_ls():
 
-    ext_command = 'lift ls -tu #DALSUSER -tp #DALSPASSWORD -th #DALSHOST '
-    ext_command = ext_command.replace('#DALSUSER', para['DALSUSER']) \
-        .replace('#DALSPASSWORD', para['DALSPASSWORD']) \
-        .replace('#DALSHOST', para['DALSHOST'])
+    ext_command = 'lift ls -tu #BLUCEDPUSER -tp #BLUCEDPPASSWORD -th #BLUCEDPHOST '
+    ext_command = ext_command.replace('#BLUCEDPUSER', para['BLUCEDPUSER']) \
+        .replace('#BLUCEDPPASSWORD', para['BLUCEDPPASSWORD']) \
+        .replace('#BLUCEDPHOST', para['BLUCEDPHOST'])
 
     exe_com(ext_command, '.')
 
@@ -58,11 +58,11 @@ def lift_ls():
 @Timeit
 def lift_rm(datafile):
 
-    ext_command = 'lift rm -f #TRGTFILE -tu #DALSUSER -tp #DALSPASSWORD -th #DALSHOST '
+    ext_command = 'lift rm -f #TRGTFILE -tu #BLUCEDPUSER -tp #BLUCEDPPASSWORD -th #BLUCEDPHOST '
     ext_command = ext_command.replace('#TRGTFILE', os.path.basename(datafile))
-    ext_command = ext_command.replace('#DALSUSER', para['DALSUSER']) \
-        .replace('#DALSPASSWORD', para['DALSPASSWORD']) \
-        .replace('#DALSHOST', para['DALSHOST'])
+    ext_command = ext_command.replace('#BLUCEDPUSER', para['BLUCEDPUSER']) \
+        .replace('#BLUCEDPPASSWORD', para['BLUCEDPPASSWORD']) \
+        .replace('#BLUCEDPHOST', para['BLUCEDPHOST'])
 
     exe_com(ext_command, '.')
 

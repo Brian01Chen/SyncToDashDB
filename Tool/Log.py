@@ -36,7 +36,7 @@ class Log:
             self.name = os.path.splitext(os.path.split(os.path.realpath(__file__))[1])[0]
 
         # get current date
-        self.today = datetime.date.today()
+        self.today = datetime.datetime.now()
         self.today = str(self.today).replace("-", "")
 
         # create log file

@@ -3,6 +3,7 @@ from Tool.Util import *
 from Tool.Log import *
 
 
+@Timeit
 def export(**kwargs):
     conn_str = 'connect to @t_db_name user @t_user using @t_pwd @'
     export_str = 'export to @t_table.csv of del select * from @t_table @'
@@ -22,6 +23,7 @@ def export(**kwargs):
     return dbsql
 
 
+@Timeit
 def exeExport(exptable, workpath, db2envpath, dbsql):
 
     exe_com(''.join((os.path.dirname(db2envpath), '/db2profile'), '.'))
@@ -36,4 +38,15 @@ def exeExport(exptable, workpath, db2envpath, dbsql):
 
     commstr = ''.join(('db2 -td@ -f ', sqlfile, ' > 1.out'))
     exe_com(commstr, '.')
+
+    expfile = ''.join((exptable, '.csv'))
+    if os.path.exists(expfile):
+        if os.path.getsize(expfile):
+            return expfile
+        else:
+            logger('empty file:' + expfile, 'error')
+            return None
+    else:
+        logger(expfile + ' generate error! ', 'error')
+        return None
 

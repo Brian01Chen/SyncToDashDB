@@ -1,30 +1,53 @@
 import paramiko
-import gzip, shutil
+import gzip
+import shutil
 import zipfile
+from Tool.Util import *
 
-def ssh_scp_put(ip,user,password,local_file,remote_file):
+
+@Timeit
+def ssh_conn(ip, user, password):
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     ssh.connect(ip, 22, user, password)
+    message = 'Connect to %s' % ip
+    logger(message)
+    return ssh
+
+
+@Timeit
+def scp_put(ssh, local_file, remote_file):
     sftp = ssh.open_sftp()
     sftp.put(local_file, remote_file)
+    message = 'put %s to %s' % (local_file, remote_file)
+    logger(message)
     ssh.close()
+    return remote_file
 
-def compress(file, ctype):
+@Timeit
+def compress(file, ctype='gzip'):
     if ctype == 'gzip':
-        cpfile = ''.join((file.rstrip('.csv'), '.gz'))
+        cp_file = ''.join((file.rstrip('.csv'), '.gz'))
         with open(file, 'rb') as f_in:
-            with gzip.open(cpfile, 'wb') as f_out:
+            with gzip.open(cp_file, 'wb') as f_out:
                 shutil.copyfileobj(f_in, f_out)
     elif ctype == 'zip':
-        cpfile = ''.join((file.rstrip('.csv'), '.zip'))
-        f = zipfile.ZipFile(cpfile, 'w', zipfile.ZIP_DEFLATED)
-        f.write(cpfile)
+        cp_file = ''.join((file.rstrip('.csv'), '.zip'))
+        f = zipfile.ZipFile(cp_file, 'w', zipfile.ZIP_DEFLATED)
+        f.write(cp_file)
         f.close()
+    message = 'compress %s using %s' % (file, ctype)
+    logger(message)
+    return cp_file
 
-def uncompress(file, ctype):
+
+@Timeit
+def decompress(file, ctype='gzip'):
     if ctype == 'gzip':
-        cpfile = ''.join((file.rstrip('.gz'), '.csv'))
+        csv_file = ''.join((file.rstrip('.gz'), '.csv'))
         g = gzip.GzipFile(mode="rb", fileobj=open(file, 'rb'))
-        with open(cpfile, "wb") as f:
+        with open(csv_file, "wb") as f:
             f.write(g.read())
+    message = 'decompress %s using %s' % (file, ctype)
+    logger(message)
+    return csv_file

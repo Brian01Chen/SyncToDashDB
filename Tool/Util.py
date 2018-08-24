@@ -31,22 +31,30 @@ def read_conf(conf):
     return para
 
 
-def write_conf(content, filename):
-    with open(filename, 'w+') as f:
-        lines = content.split('\n')
-        for line in lines:
+def update_conf(key, content, filename):
+    contents = ''
+    with open(filename, 'r') as f:
+        for line in f:
             if len(line.strip()) == 0:
                 break
-            f.write(line)
+            if line.startswith(key) and content != '' and content is not None:
+                line = key + '=' + content + '\n'
+            contents += line
+    with open(filename, 'w+') as f:
+        f.write(contents)
 
 
-def exe_com(commdstr, path):
-    logger(commdstr)
+def exe_com(command_str, path):
+    logger(command_str)
     env = os.environ.copy()
-    p = subprocess.Popen(commdstr, shell=True, cwd=path, env=env, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    p = subprocess.Popen(command_str, shell=True, cwd=path, env=env, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     result = p.communicate()
     logger(result)
     p.wait()
     status = p.returncode
     logger(status)
     return status
+
+
+if __name__ == '__main__':
+    update_conf('DALSCHEMA', 'DSDWWWW', '../configure')
