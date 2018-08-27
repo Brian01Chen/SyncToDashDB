@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67829cc2-66ed-4ca9-816a-184d578510e6" name="Default" comment="update para">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataToDashDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataToDashDB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/DB2CLI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/DB2CLI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/FileTransfer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/FileTransfer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/GetPara.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/GetPara.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/LiftCLI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Src/LiftCLI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tool/Log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tool/Log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tool/Util.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tool/Util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configure" beforeDir="false" afterPath="$PROJECT_DIR$/configure" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/Log_20180823.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="67829cc2-66ed-4ca9-816a-184d578510e6" name="Default" comment="update para" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,9 +73,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Src/FileTransfer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+            <state relative-caret-position="280">
+              <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
               <folding>
+                <element signature="e#1#12#0" expanded="true" />
                 <marker date="1535370323935" expanded="true" signature="371:564" ph="..." />
               </folding>
             </state>
@@ -177,7 +167,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1595" />
     <option name="height" value="870" />
   </component>
@@ -194,11 +184,6 @@
             <path>
               <item name="SyncToDashDB" type="b2602c69:ProjectViewProjectNode" />
               <item name="SyncToDashDB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SyncToDashDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SyncToDashDB" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SyncToDashDB" type="b2602c69:ProjectViewProjectNode" />
@@ -419,21 +404,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20687376" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20687376" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49636483" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49041638" visible="true" weight="0.27234042" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" sideWeight="0.4957039" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49041638" weight="0.27234042" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4976867" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5095836" side_tool="true" visible="true" weight="0.27234042" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5042961" side_tool="true" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49966952" weight="0.32907802" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -679,9 +663,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Src/FileTransfer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        <state relative-caret-position="280">
+          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
           <folding>
+            <element signature="e#1#12#0" expanded="true" />
             <marker date="1535370323935" expanded="true" signature="371:564" ph="..." />
           </folding>
         </state>
