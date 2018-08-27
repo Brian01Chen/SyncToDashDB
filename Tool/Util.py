@@ -2,7 +2,9 @@ import time
 import os
 import subprocess
 from datetime import datetime
-from Tool.Log import logger
+from Tool.Log import log_factory
+import hashlib
+import paramiko
 
 
 class Timeit(object):
@@ -11,10 +13,10 @@ class Timeit(object):
 
     def __call__(self, *args, **kwargs):
         start_time = time.time()
-        logger("Job start time is %s " % datetime.now())
+        log_factory("Job " + "start time is %s " % datetime.now())
         result = self._wrapped(*args, **kwargs)
-        logger("Job end time is %s " % datetime.now())
-        logger("elapsed time is %s " % round(time.time() - start_time, 3))
+        log_factory("Job " + "end time is %s " % datetime.now())
+        log_factory("elapsed time is %s " % round(time.time() - start_time, 3))
         return result
 
 
@@ -39,22 +41,59 @@ def update_conf(key, content, filename):
                 break
             if line.startswith(key) and content != '' and content is not None:
                 line = key + '=' + content + '\n'
+            if line.startswith('WORKDIR') and line.split('=')[1].strip() == '':
+                line = key + '=' + os.getcwd() + '\n'
             contents += line
     with open(filename, 'w+') as f:
         f.write(contents)
 
 
-def exe_com(command_str, path):
-    logger(command_str)
+def exe_com(command_str, path, output_file=None, shell=True):
+    log_factory(command_str)
     env = os.environ.copy()
-    p = subprocess.Popen(command_str, shell=True, cwd=path, env=env, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    result = p.communicate()
-    logger(result)
-    p.wait()
-    status = p.returncode
-    logger(status)
-    return status
+    p = subprocess.Popen(command_str, shell=shell, cwd=path, env=env,
+                         stdout=output_file,
+                         stderr=subprocess.STDOUT)
+    while p.poll() is None:
+        # waiting for subprocess finished
+
+        if p.stderr:
+            line = p.stderr.readlines().strip()
+            log_factory(line)
+    if p.returncode == 0:
+        log_factory(command_str + ' finish')
+    return p.returncode
+
+
+def ssh_exe_com(command_str, **kwargs):
+    client = paramiko.SSHClient()
+    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    client.connect(kwargs['LIFTSERVER'], 22, kwargs['LIFTUSER'], kwargs['LIFTPASSWD'], timeout=30)
+    log_factory(command_str)
+    stdin, stdout, stderr = client.exec_command(command_str, get_pty=True)
+    stdin.close()
+    for line in stdout.read().splitlines():
+        log_factory(line)
+    channel = stdout.channel
+    status = channel.recv_exit_status()
+    log_factory('Command Status: ' + status)
+    client.close()
+
+def encode_pass(password_str):
+    h = hashlib.sha1()
+    h.update(bytes(password_str, encoding='utf-8'))
+    return h.hexdigest()
+
+
+def crypt(source, key='DASHDB'):
+    from itertools import cycle
+    result = ''
+    temp = cycle(key)
+    for ch in source:
+        result = result+chr(ord(ch)^ord(next(temp)))
+    return result
 
 
 if __name__ == '__main__':
-    update_conf('DALSCHEMA', 'DSDWWWW', '../configure')
+    newpass = encode_pass('CHANGEAsap11&&')
+    print(newpass)

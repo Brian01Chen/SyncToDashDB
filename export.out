@@ -1,0 +1,17 @@
+
+   Database Connection Information
+
+ Database server        = DB2/AIX64 10.5.8
+ SQL authorization ID   = CSONGBJ
+ Local database alias   = DSSRUG
+
+
+SQL3104N  The Export utility is beginning to export data to file 
+"DWDM2.APPL_DATA_RECENCY.csv".
+
+SQL3105N  The Export utility has finished exporting "4" rows.
+
+
+Number of rows exported: 4
+
+

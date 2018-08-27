@@ -37,7 +37,7 @@ class Log:
 
         # get current date
         self.today = datetime.datetime.now()
-        self.today = str(self.today).replace("-", "")
+        self.today = str(self.today).replace(" ", ".").replace(":",".")
 
         # create log file
         self.logName = "%s%s_%s.txt" % (self.log_dir, self.name, self.today)
@@ -48,15 +48,19 @@ class Log:
                 os.remove(self.logName)
             except PermissionError as e:
                 pass
-        current_job = os.path.basename(os.path.realpath(sys.argv[0]))
-        self.extra = {'host': socket.gethostname(), 'user': getpass.getuser(), 'jobname': current_job}
-        self.logger()
 
-    def logger(self):
-        uformat = '%(asctime)-15s %(host)s %(user)-8s  %(jobname)s:%(message)s'
-        logging.basicConfig(level=logging.INFO, datefmt='%a, %d %b %Y %H:%M:%S', format=uformat,
-                            filename=self.logName, filemode='w')
-        self.logger = logging.getLogger(self.name)
+        host = socket.gethostname()
+        current_job = os.path.basename(os.path.realpath(sys.argv[0]))
+        self.extra = {'host': host, 'user': getpass.getuser(), 'jobname': current_job}
+        self.logger = self.logger_inst()
+
+    def logger_inst(self):
+
+        u_format = '%(asctime)-15s %(host)s %(user)s %(jobname)s: %(message)s'
+        logging.basicConfig(format=u_format, filename=self.logName, filemode='w', datefmt='%Y-%m-%d %H:%M:%S')
+        logger_inst = logging.getLogger('apt_log')
+        logger_inst.setLevel(logging.DEBUG)
+        return logger_inst
 
     def info(self, text):
         return self.logger.info(text, extra=self.extra)
@@ -71,14 +75,21 @@ class Log:
         return self.logger.error(text, extra=self.extra)
 
 
-def logger(text, logtype=None):
+def log_factory(text, logtype=None):
     logger = Log()
     if logtype is None:
         logtype = 'info'
     return getattr(logger, logtype)(text)
 
-def loggerPath(basedir=None, name=None, text=None, logtype=None):
+
+def log_factory_path(basedir=None, name=None, text=None, logtype=None):
     logger = Log(basedir=basedir, name=name)
     if logtype is None:
         logtype = 'info'
     return getattr(logger, logtype)(text)
+
+
+if __name__ == '__main__':
+    log_factory('first', 'debug')
+    log_factory('second', 'error')
+    log_factory('third', 'info')
