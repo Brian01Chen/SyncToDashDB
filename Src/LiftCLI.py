@@ -6,11 +6,15 @@ from Tool.Log import *
 para = read_conf('configure')
 
 
-def lift_ext(schema, tabname, trgtfile):
+def lift_ext():
+
+    tgt_file = para['TMPFILE']
     ext_command = 'lift extract -ss #SCHEMA -st #SRCTABLE -sd #DSWDB -su #DBUSER -sp #DBPASSWD -sh #DBHOST -sdp #PORT ' \
                   '-sdt db2 -ssl ' \
-                  '-f #TRGTFILE -rp'
-    ext_command = ext_command.replace('#SCHEMA', schema).replace('#SRCTABLE', tabname).replace('#TRGTFILE', trgtfile) \
+                  '-f #file -rp'
+
+    ext_command = ext_command.replace('#SCHEMA', para['SRCSCHEMA']).replace('#SRCTABLE', para['SRCTABLE'])\
+        .replace('#file', tgt_file) \
         .replace('#DSWDB', para['DSWDB']).replace('#DBHOST', para['DBHOST']).replace('#PORT', para['PORT'])    \
         .replace('#DBUSER', para['DBUSER']).replace('#DBPASSWD', "'" + para['DBPASSWD'] + "'")
     return ext_command

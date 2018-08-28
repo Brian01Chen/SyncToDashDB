@@ -45,7 +45,20 @@ def lift_load_to_cedp(comp_file):
     ssh_exe_com(work_path + ';' + exe_env + ';' + lift.lift_rm(csv_file), **para)
 
 
+@Timeit
+def all_thr_lift():
+    work_path = 'cd ' + para['LIFTWKDIR']
+    exe_env = '. ~/.bash_profile'
+    # ssh_exe_com(work_path + ';' + exe_env + ';' + lift.lift_ext(), **para)
+    csv_file = para['TMPFILE']
+    ssh_exe_com(work_path + ';' + exe_env + ';' + lift.lift_put(csv_file), **para)
+    ssh_exe_com(work_path + ';' + exe_env + ';' + lift.lift_ls(), **para)
+    ssh_exe_com(work_path + ';' + exe_env + ';' + lift.lift_load(csv_file), **para)
+    # ssh_exe_com(work_path + ';' + exe_env + ';' + lift.lift_rm(csv_file), **para)
+
+
 if __name__ == '__main__':
     log_factory('Data Sync To CEDP DashDB Batch Job Start!')
-    com_file = 'DWDM2.APPL_DATA_RECENCY.csv.gz'
-    lift_load_to_cedp(com_file)
+    # com_file = 'DWDM2.APPL_DATA_RECENCY.csv.gz'
+    # lift_load_to_cedp(com_file)
+    all_thr_lift()

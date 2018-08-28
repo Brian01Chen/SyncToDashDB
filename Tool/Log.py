@@ -42,13 +42,6 @@ class Log:
         # create log file
         self.logName = "%s%s_%s.txt" % (self.log_dir, self.name, self.today)
 
-        # remove log file at first
-        if os.path.exists(self.logName):
-            try:
-                os.remove(self.logName)
-            except PermissionError as e:
-                pass
-
         host = socket.gethostname()
         current_job = os.path.basename(os.path.realpath(sys.argv[0]))
         self.extra = {'host': host, 'user': getpass.getuser(), 'jobname': current_job}
@@ -82,7 +75,7 @@ def log_factory(text, logtype=None):
     return getattr(logger, logtype)(text)
 
 
-def log_factory_path(basedir=None, name=None, text=None, logtype=None):
+def log_path_factory(basedir=None, name=None, text=None, logtype=None):
     logger = Log(basedir=basedir, name=name)
     if logtype is None:
         logtype = 'info'

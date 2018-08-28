@@ -13,10 +13,10 @@ class Timeit(object):
 
     def __call__(self, *args, **kwargs):
         start_time = time.time()
-        log_factory("Job " + "start time is %s " % datetime.now())
+        log_factory(self._wrapped.__name__ + " job start time is %s " % datetime.now())
         result = self._wrapped(*args, **kwargs)
-        log_factory("Job " + "end time is %s " % datetime.now())
-        log_factory("elapsed time is %s " % round(time.time() - start_time, 3))
+        log_factory(self._wrapped.__name__ + " job end time is %s " % datetime.now())
+        log_factory(self._wrapped.__name__ + " job elapsed time is %s " % round(time.time() - start_time, 4))
         return result
 
 
@@ -65,10 +65,16 @@ def exe_com(command_str, path, output_file=None, shell=True):
     return p.returncode
 
 
-def ssh_exe_com(command_str, **kwargs):
+@Timeit
+def ssh_exe_com(command_str, server='Lift', **kwargs):
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect(kwargs['LIFTSERVER'], 22, kwargs['LIFTUSER'], kwargs['LIFTPASSWD'], timeout=30)
+    if server == 'Lift':
+        client.connect(kwargs['LIFTSERVER'], 22, kwargs['LIFTUSER'], kwargs['LIFTPASSWD'], timeout=30)
+    elif server == 'DB2':
+        client.connect(kwargs['DBHOST'], 22, kwargs['DBUSER'], kwargs['DBPASSWD'], timeout=30)
+    else:
+        log_factory('Error Host Type', 'error')
     log_factory(command_str)
     stdin, stdout, stderr = client.exec_command(command_str, get_pty=True)
     stdin.close()
@@ -76,8 +82,9 @@ def ssh_exe_com(command_str, **kwargs):
         log_factory(line)
     channel = stdout.channel
     status = channel.recv_exit_status()
-    log_factory('Command Status: ' + status)
+    log_factory('Command Status: ' + str(status))
     client.close()
+
 
 def encode_pass(password_str):
     h = hashlib.sha1()
@@ -85,15 +92,22 @@ def encode_pass(password_str):
     return h.hexdigest()
 
 
-def crypt(source, key='DASHDB'):
+def crypt(source, key=''):
     from itertools import cycle
     result = ''
     temp = cycle(key)
     for ch in source:
-        result = result+chr(ord(ch)^ord(next(temp)))
+        try:
+            result = result+chr(ord(ch) ^ ord(next(temp)))
+        except StopIteration:
+            pass
     return result
 
 
 if __name__ == '__main__':
-    newpass = encode_pass('CHANGEAsap11&&')
-    print(newpass)
+    new_pass = encode_pass('d3214')
+    print(new_pass)
+    new_pass = crypt('d3214', 'tt')
+    print(new_pass)
+    new_pass = crypt(new_pass, 'tt')
+    print(new_pass)
